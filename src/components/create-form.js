@@ -14,26 +14,20 @@ export default function CreateForm({ onCreate }) {
   }
   return (
     <Form onSubmit={submitHandler}>
-
-      <legend>Create Cookie Stand</legend>
-
-      <Form.Group className="mb-3" controlId="formLocation">
-        {/* <Form.Label htmlFor="location">Location</Form.Label> */}
+      <legend className="mb-4" id="legend">Create Cookie Stand</legend>
+      <Form.Group className="mb-4" controlId="formLocation">
         <Form.Control type="text" name="location" placeholder="location"></Form.Control>
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formMinCustomersPerHour">
-        {/* <Form.Label htmlFor="min-customers">Min Customers Per Hour</Form.Label> */}
+      <Form.Group className="mb-4" controlId="formMinCustomersPerHour">
         <Form.Control type="number" name="min-customers" placeholder="Minimum Customers per Hour" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="formMaxCustomersPerHour">
-        {/* <Form.Label htmlFor="min-customers">Max Customers Per Hour</Form.Label> */}
+      <Form.Group className="mb-4" controlId="formMaxCustomersPerHour">
         <Form.Control type="number" name="max-customers" placeholder="Maximum Customers per Hour" />
       </Form.Group>
-      <Form.Group className="mb-3" controlId="averageCookies">
-        {/* <Form.Label htmlFor="min-customers">Max Customers Per Hour</Form.Label> */}
+      <Form.Group className="mb-4" controlId="averageCookies">
       <Form.Control type="number" name="avg-cookies" step=".1" placeholder="Average Cookies per Sale"/>
       </Form.Group>
-      <Button variant="primary" type="submit">Create</Button>
+      <Button id="formButton" size="lg" type="submit" className="mb-4">Create</Button>
     </Form>
   );
 }
