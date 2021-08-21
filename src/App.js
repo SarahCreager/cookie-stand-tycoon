@@ -1,9 +1,10 @@
-import { Component } from 'react'
-import Header from './components/header'
-import CreateForm from './components/create-form'
-import ReportTable from './components/report-table'
-import Footer from './components/footer'
-import { hours } from './data'
+import { Component } from 'react';
+import Header from './components/header';
+import CreateForm from './components/create-form';
+import ReportTable from './components/report-table';
+import Footer from './components/footer';
+import { hours } from './data';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
 
@@ -11,7 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       standReports: []
-    }
+    };
   }
 
   handleCreate = (standData) => {
