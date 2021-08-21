@@ -1,25 +1,89 @@
-
+/* ------------------------------HEADER---------------------------*/
 #navBarContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100px;
 }
 
+#title {
+  font-size: 120%;
+  color: #CEB5A4;
+}
+
+/* ------------------------------MAIN---------------------------*/
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 800px;
+  background-repeat: no-repeat;
+  background-image: url("../src//assets/cookies.jpg");
+  background-position: top;
+  background-attachment: fixed;
+  background-size: 100%;
 }
 
 form {
-  width: 30%;
+  width: 35%;
+}
+
+#legend{
+  font-size: 250%;
 }
 
 legend {
   text-align: center;
-  margin-top: 4%;
+  margin-top: 8%;
   font-weight: 500;
-  color: #777777;
+  color: #94878B;
+}
+
+#formButton {
+  background: #CEB5A4;
+  border: #544D4F;
+  transition: all 0.4s ease-in-out;
+}
+
+#formButton:hover {
+  background: #cec3b8;
+}
+
+#table {
+  width: 50%;
+}
+
+Table {
+  margin-top: 6%;
+  /* border-radius: 10%; */
+}
+
+#tr{
+  color: #CEB5A4;
+}
+
+#trHead, #trFoot{
+  color:#827267;
+}
+
+main h2 {
+  font-size: 150%;
+  color: #695C53;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+/* ------------------------------FOOTER---------------------------*/
+#footer {
+  background: #2C2C2C;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer p {
+  font-size: 120%;
+  color: #d8cdc5;
 }

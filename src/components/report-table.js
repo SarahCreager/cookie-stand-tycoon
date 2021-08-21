@@ -1,3 +1,5 @@
+import Table from 'react-bootstrap/Table'
+
 export default function ReportTable(props) {
 
   if (props.reports.length === 0) {
@@ -6,7 +8,7 @@ export default function ReportTable(props) {
   const headers = ['Location', ...props.hours, 'Totals'];
 
   return (
-    <table class="table-auto">
+    <Table class="table-auto" id="table" striped bordered hover variant="light">
       <HeaderRow headerValues={headers} />
 
       <tbody>
@@ -17,14 +19,14 @@ export default function ReportTable(props) {
 
       <FooterRow reports={props.reports} />
 
-    </table>
+    </Table>
   );
 }
 
 function HeaderRow({ headerValues }) {
   return (
     <thead>
-      <tr>
+      <tr id="trHead">
         {headerValues.map((header, index) => {
           return <th key={index}>{header}</th>;
         })}
@@ -41,7 +43,7 @@ function ReportRow({ report }) {
 
   return (
 
-    <tr>
+    <tr id="tr">
       {values.map((value, i) => <td key={i}>{value}</td>)}
     </tr>
   );
@@ -70,7 +72,7 @@ function FooterRow({ reports }) {
 
   return (
     <tfoot>
-      <tr>
+      <tr id="trFoot">
         {cellValues.map((value, index) => {
           return <th key={index}>{value}</th>;
         })}
